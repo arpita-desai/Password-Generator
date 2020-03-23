@@ -7,10 +7,13 @@ var generate = document.getElementById("myBtn");
 //Ask users preferences
 
 var passwordLength = prompt("How long your password should be?");
-    if(passwordLength < 8 || passwordLength === null){
-            alert("Password length should be at least 8");
-            var passwordLength = prompt("How long your password should be?");
-    }    
+    
+while(passwordLength < 8 || passwordLength === null){
+    alert("Password length should be at least 8");
+    var passwordLength = prompt("How long your password should be?");
+    
+}
+
 var lowerCase = confirm("Do you want lowercase letter in password?");
 var upperCase = confirm("Do you want uppercase letter in password?");
 var symbols = confirm("Do you want special character in password?");
