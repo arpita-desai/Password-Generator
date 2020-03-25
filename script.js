@@ -7,7 +7,11 @@ var generate = document.getElementById("myBtn");
 //Ask users preferences
 
 var passwordLength = prompt("How long your password should be?");
-    
+    // if(passwordLength < 8 || passwordLength === null){
+    //       alert("Password length should be at least 8");
+    //       var passwordLength = prompt("How long your password should be?");
+    //      //return ''; 
+    // }    
 while(passwordLength < 8 || passwordLength === null){
     alert("Password length should be at least 8");
     var passwordLength = prompt("How long your password should be?");
@@ -53,6 +57,7 @@ const randomFunc = {
 //main function to generate password
  function checkForPassword(){
 
+   //+ unary operator convert string into number
     var length = +passwordLength;
     var hasLower, hasNumber, hasUpper, hasSymbol;
         
@@ -74,7 +79,6 @@ const randomFunc = {
     
        console.log(length, hasLower, hasNumber, hasUpper, hasSymbol);
 
-        //passwordDisplay.innerText = generator(hasLower, hasUpper, hasNumber, hasSymbol, length);
         generator(hasLower, hasUpper, hasNumber, hasSymbol, length);
        
  }
@@ -92,7 +96,7 @@ const randomFunc = {
 	
 	// Doesn't have a selected type
 	if(typesCount === 0) {
-		return '';
+        return '';
 	}
 	
 	// create a loop
